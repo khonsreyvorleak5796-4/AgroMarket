@@ -33,3 +33,24 @@
   font-size: 1.1rem;
   margin-bottom: 5px;
 }
+.carousel-item{
+  height: 600px;
+}
+
+.d-flex{
+  background-color: #439B47;
+
+}
+.fs-4{
+  color: black; 
+  margin-left: 50px;
+}
+.nav-link{
+  color: white;
+  margin-right: 50px;
+}
+/* .container{
+  margin-top: 1%;
+
+
+} */

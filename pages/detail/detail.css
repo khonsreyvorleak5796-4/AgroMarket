@@ -1,0 +1,23 @@
+.d-flex{
+    background-color: #439B47;
+
+  }
+  .fs-4{
+    color: black; 
+    margin-left: 50px;
+  }
+  .nav-link{
+    color: white;
+    margin-right: 50px;
+  }
+  .container{
+    margin-top: 1%;
+
+
+  }
+.carousel-inner{
+    border-radius: 50px;
+}
+.col-md-6 p{
+    font-size: 25px;
+}
