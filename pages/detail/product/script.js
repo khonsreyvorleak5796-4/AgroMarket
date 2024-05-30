@@ -31,7 +31,8 @@ function displayProducts(products, containerId) {
         const attributes = product.attributes;
         const imageUrl = attributes.images?.data?.attributes?.url || 'default-image-url.jpg'; // Fallback to default image if not available
         const productCard = `
-            <div class="products">
+        <div class="products">
+        <a href="/pages/detail/index.html?product-id=${product.id}">
                 <div class="image">
                     <img src="${imageUrl}" alt="${attributes.name}">
                 </div>
@@ -40,9 +41,10 @@ function displayProducts(products, containerId) {
                     <div class="price-p"><b><i>$ ${attributes.price}</i></b></div>
                     <div class="Quantity">Quantity: ${attributes.quantity}</div>
                     <div class="text">${attributes.originprovince}</div>
-                    <a href="/pages/detail/index.html?category-id=${product.id}"><button>Add to cart</button></a>
+                    <button>Add to cart</button>
                 </div>
-            </div>
+                </a>
+        </div>
         `;
         container.insertAdjacentHTML('beforeend', productCard);
     });
