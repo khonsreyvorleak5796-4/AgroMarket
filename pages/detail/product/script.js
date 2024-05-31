@@ -41,11 +41,23 @@ function displayProducts(products, containerId) {
                     <div class="price-p"><b><i>$ ${attributes.price}</i></b></div>
                     <div class="Quantity">Quantity: ${attributes.quantity}</div>
                     <div class="text">${attributes.originprovince}</div>
-                    <button>Add to cart</button>
+                    <div class="boolean">Organic: ${attributes.organic}</div>
+                    
                 </div>
                 </a>
         </div>
         `;
         container.insertAdjacentHTML('beforeend', productCard);
     });
+}
+let params= new URL(document.location) .searchParams;
+let lang= params.get("Language")
+
+
+
+document.getElementById(lang).checked=true;
+function getLanguage(myLang){
+    console.log (myLang);
+    params.set('Language',myLang);
+    history.replaceState( null , null , "?" + params.toString());
 }
