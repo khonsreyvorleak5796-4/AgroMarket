@@ -59,3 +59,4 @@ fetchAndDisplayProducts(fruitsUrl, 'fruits-container');
  fetchAndDisplayProducts(vegetablesUrl, 'vegetables-container');
  fetchAndDisplayProducts(tractorsUrl, 'tractors-container');
  fetchAndDisplayProducts(fertilizersUrl, 'fertilizers-container');
+
