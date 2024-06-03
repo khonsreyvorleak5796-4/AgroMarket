@@ -54,6 +54,9 @@ const fertilizersUrl = `${apiUrl}filters[category_ids][CategoryID][$eq]=4&popula
 
 // Fetch and display products for each category
 fetchAndDisplayProducts(fruitsUrl, 'fruits-container');
-fetchAndDisplayProducts(vegetablesUrl, 'vegetables-container');
-fetchAndDisplayProducts(tractorsUrl, 'tractors-container');
-fetchAndDisplayProducts(fertilizersUrl, 'fertilizers-container');
+
+ fetchAndDisplayProducts(vegetablesUrl, 'vegetables-container');
+ fetchAndDisplayProducts(tractorsUrl, 'tractors-container');
+ fetchAndDisplayProducts(fertilizersUrl, 'fertilizers-container');
+
+

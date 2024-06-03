@@ -16,25 +16,12 @@
 .container {
   margin-top: 1%;
 }
-.select{
-  width: 95%;
-  height: 100px;
-justify-content: end;
-align-items: center;
-display: flex;
-  margin:auto ;
-  font-size: 22px;
-  line-height: 20%;
-}
 
 
 
-.product-row {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2%;
-  flex-wrap: wrap;
-}
+
+
+
 
 .products {
   display: flex;
@@ -48,6 +35,15 @@ display: flex;
   float: left;
   margin-left: 40px;
 }
+
+
+.product-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  flex-wrap: wrap;
+}
+
 
 .products a {
   text-decoration: none;
@@ -85,6 +81,7 @@ object-fit: cover;
   font-size: 25px;
   margin-top: 5px;
   text-align: center;
+
 }
 
 .paragraph {
@@ -92,6 +89,10 @@ object-fit: cover;
   text-align: center;
   font-size: 25px;
 }
+
+
+}
+
 
 .Quantity {
   color: #1E1C1C;
@@ -106,4 +107,19 @@ object-fit: cover;
   font-size: 25px;
   text-align: center;
 
+
+}
+span{
+  margin-left: 20px;
+}
+.btn-primary{
+ background-color: #439B47;
+ margin-top: 2%;
+ 
+}
+/* Style for the active button */
+.btn.active {
+  background-color: blue;
+  border-color: blue;
+  color: white;
 }

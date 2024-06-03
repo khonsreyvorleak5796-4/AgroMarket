@@ -12,30 +12,31 @@
 
 </head>
 <body>
+    
     <div class="container">
         <header class="d-flex justify-content-center py-3 border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                 <span class="fs-4"><em>AgroMarket</em></span>
             </a>
-            <ul class="nav ">
+
+            <ul class="nav">
                 <li class="nav-item"><a href="/index.html" class="nav-link" aria-current="page"><i>Home</i></a></li>
-                <li class="nav-item"><a href="index.html" class="nav-link" style="border-bottom: solid white 0.5px ;"><i>Products</i></a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link" style="border-bottom: solid white 0.5px;"><i>Products</i></a></li>
             </ul>
         </header>
-<div class="select">
-    <form action="">
-       <div class="all">
-<a href="/pages/detail/product/index.html?CategoryID=34">All<input onclick="getLanguage('all')" type="radio" name="filter" id="all" value="all"></a>
-Fruits <input  onclick="getLanguage('fruit')" type="radio" name="filter" id="fruit" value="fruit">
-Vegetables <input onclick="getLanguage('veg')"  type="radio" name="filter" id="veg" value="veg">
-Tractors <input onclick="getLanguage('trac')"  type="radio" name="filter" id="trac" value="trac">
-Fertilizers <input onclick="getLanguage('fert')"  type="radio" name="filter" id="fert" value="fert">
-</div>
-<script src="script.js"></script>
-</form>
-</div>
+        <span>
+            <span>
+                <a id="all-btn" href="../product/index.html" type="button" class="btn btn-primary">All</a>
+                <a id="fruit-btn" href="../product/index.html?CategoryID=1" type="button" class="btn btn-primary">Fruit</a>
+                <a id="vegetable-btn" href="../product/index.html?CategoryID=2" type="button" class="btn btn-primary">Vegetable</a>
+                <a id="tractor-btn" href="../product/index.html?CategoryID=3" type="button" class="btn btn-primary">Tractor</a>
+                <a id="fertilizer-btn" href="../product/index.html?CategoryID=4" type="button" class="btn btn-primary">Fertilizer</a>
+            </span>
+        </span>
+
         <div class="category-product" id="product-container">
-            <!-- Products will be injected here by JavaScript -->
+            
+
         </div>
     </div>
 
