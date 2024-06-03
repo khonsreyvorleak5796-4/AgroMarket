@@ -56,11 +56,42 @@ function displayProducts(products, containerId) {
                     <div class="price-p"><b><i>$ ${attributes.price}</i></b></div>
                     <div class="Quantity">Quantity: ${attributes.quantity}</div>
                     <div class="text">${attributes.originprovince}</div>
-                    <a href="/pages/detail/index.html?category-id=${product.id}"><button>Add to cart</button></a>
+                  
                 </div>
             </div>
         `;
         container.insertAdjacentHTML('beforeend', productCard);
     });
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll("a.btn");
+
+    // Function to handle the button click event
+    function handleButtonClick(event) {
+        // Remove active class from all buttons
+        buttons.forEach(button => {
+            button.classList.remove("active");
+        });
+
+        // Add active class to the clicked button
+        event.target.classList.add("active");
+
+        // Save the active button's ID in local storage
+        localStorage.setItem("activeButtonId", event.target.id);
+    }
+
+    // Attach event listener to each button
+    buttons.forEach(button => {
+        button.addEventListener("click", handleButtonClick);
+    });
+
+    // Check if there is an active button stored in local storage
+    const activeButtonId = localStorage.getItem("activeButtonId");
+    if (activeButtonId) {
+        const activeButton = document.getElementById(activeButtonId);
+        if (activeButton) {
+            activeButton.classList.add("active");
+        }
+    }
+});
 
