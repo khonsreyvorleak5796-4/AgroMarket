@@ -33,7 +33,9 @@ function displayProducts(products, containerId) {
         const productCard = `
             <div class="products">
                 <div class="image">
-                    <img src="${imageUrl}" alt="${attributes.name}">
+                    <a href="/pages/detail/index.html?category-id=${product.id}">
+                        <img src="${imageUrl}" alt="${attributes.name}">
+                    </a>
                 </div>
                 <div class="paragraph">
                     <div class="name-p"><b>${attributes.name}</b></div>

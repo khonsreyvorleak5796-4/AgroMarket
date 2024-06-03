@@ -30,9 +30,10 @@
    
   }
   img{
-    width: 100%;
+    width: 60%;
     height: 100%;
     object-fit: cover;
+    margin-left: 100px;
   }
   .name-p{
     font-weight: bold;
