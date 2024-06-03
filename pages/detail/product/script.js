@@ -34,7 +34,9 @@ function displayProducts(products, containerId) {
         <div class="products">
         <a href="/pages/detail/index.html?product-id=${product.id}">
                 <div class="image">
-                    <img src="${imageUrl}" alt="${attributes.name}">
+                    <a href="/pages/detail/index.html?category-id=${product.id}">
+                        <img src="${imageUrl}" alt="${attributes.name}">
+                    </a>
                 </div>
                 <div class="paragraph">
                     <div class="name-p"><b>${attributes.name}</b></div>
