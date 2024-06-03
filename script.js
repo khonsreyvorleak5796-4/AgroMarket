@@ -36,7 +36,8 @@ function displayProducts(products, containerId) {
           <div class="card-body">
             <h5 class="card-title">${attributes.name}</h5>
             <p class="card-text">Quantity: ${attributes.quantity}</p>
-            <p class="card-text">Price: $${attributes.price} per ${attributes.unit}</p>
+            <p class="card-text">Price: $${attributes.price} per Kg</p>
+            <p class="card-text">organic: ${attributes.organic}</p>
             <p class="card-text">Province: ${attributes.originprovince}</p>
           </div>
         </div>
@@ -60,3 +61,25 @@ fetchAndDisplayProducts(fruitsUrl, 'fruits-container');
  fetchAndDisplayProducts(fertilizersUrl, 'fertilizers-container');
 
 
+ document.addEventListener('DOMContentLoaded', () => {
+  // Handle active button state on products page
+  const params = new URLSearchParams(window.location.search);
+  const categoryId = params.get('CategoryID');
+  if (categoryId) {
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll('.btn-group .btn');
+    buttons.forEach(button => {
+      button.classList.remove('active');
+    });
+
+    // Add active class to the current category button
+    const activeButton = document.querySelector(`.btn-group .btn[href*="CategoryID=${categoryId}"]`);
+    if (activeButton) {
+      activeButton.classList.add('active');
+    }
+  }
+  
+  // Your existing fetch and display logic goes here
+  // Example:
+  // fetchAndDisplayProducts(categoryId, 'product-container');
+});

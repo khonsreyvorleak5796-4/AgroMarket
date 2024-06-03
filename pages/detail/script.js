@@ -1,4 +1,9 @@
 
+
+const params = new URLSearchParams(window.location.search);
+const categoryId = params.get('category-id');
+  //  <div id="product-detail-container"></div>
+// Your API details
 const apiUrl = 'https://clever-eggs-512f1b05ad.strapiapp.com/api/products';
 const apiToken = '2e79eefd74136248b06f27da2fc503f057a6db43d166d27ac3cc8a20c3da67a1fc3de621e710b23a89ce1ac95fe44807daf44b7dc774e182c458a42b2acb7868fc3ddc6424f22a89d149c807b74d617d920a34b38a40743940e85c2a598e6b30a7117ecb70c2ecd77b54f6cfabbbed40e8acab56b91f545d309808338a948d18';
 
@@ -48,7 +53,7 @@ function displayProductDetails(product) {
         <div id="carouselExample" class="carousel slide">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="${imageUrl}" class="d-block w-100" alt="${attributes.name}">
+              <img src="${imageUrl}" class="d-block w-50;" style="margin-left:300px;" alt="${attributes.name}">
             </div>
           </div>
         </div>
@@ -62,14 +67,11 @@ function displayProductDetails(product) {
         <p>Origin Province: ${attributes.originprovince}</p>
         <hr>
         <h3><b>Product Owner Contact Information</b></h3>
-        <p>Name: ${attributes.ownername}</p>
-        <p>Email: ${attributes.owneremail}</p>
-        <p>Phone: ${attributes.ownerphone}</p>
+        <p>Name:  Agromarket</p>
+        <p>Email: in.seng@ingstitute.pse.ngo</p>
+        <p>Phone: 010 409 600</p>
       </div>
     </div>
   `;
   container.innerHTML = productDetail;
 }
-
-const params = new URLSearchParams(window.location.search);
-const categoryId = params.get('category-id');
