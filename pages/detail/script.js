@@ -1,3 +1,4 @@
+
 const apiUrl = 'https://clever-eggs-512f1b05ad.strapiapp.com/api/products';
 const apiToken = '2e79eefd74136248b06f27da2fc503f057a6db43d166d27ac3cc8a20c3da67a1fc3de621e710b23a89ce1ac95fe44807daf44b7dc774e182c458a42b2acb7868fc3ddc6424f22a89d149c807b74d617d920a34b38a40743940e85c2a598e6b30a7117ecb70c2ecd77b54f6cfabbbed40e8acab56b91f545d309808338a948d18';
 
@@ -69,3 +70,6 @@ function displayProductDetails(product) {
   `;
   container.innerHTML = productDetail;
 }
+
+const params = new URLSearchParams(window.location.search);
+const categoryId = params.get('category-id');

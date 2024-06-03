@@ -47,22 +47,27 @@ function displayProducts(products, containerId) {
         const attributes = product.attributes;
         const imageUrl = attributes.images?.data?.attributes?.url || 'default-image-url.jpg'; // Fallback to default image if not available
         const productCard = `
-            <div class="products">
+        <div class="products">
+        <a href="/pages/detail/index.html?product-id=${product.id}">
                 <div class="image">
-                    <img src="${imageUrl}" alt="${attributes.name}">
+                    <a href="/pages/detail/index.html?category-id=${product.id}">
+                        <img src="${imageUrl}" alt="${attributes.name}">
+                    </a>
                 </div>
                 <div class="paragraph">
                     <div class="name-p"><b>${attributes.name}</b></div>
                     <div class="price-p"><b><i>$ ${attributes.price}</i></b></div>
                     <div class="Quantity">Quantity: ${attributes.quantity}</div>
                     <div class="text">${attributes.originprovince}</div>
-                  
+
                 </div>
-            </div>
+                </a>
+        </div>
         `;
         container.insertAdjacentHTML('beforeend', productCard);
     });
 }
+
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll("a.btn");
 
